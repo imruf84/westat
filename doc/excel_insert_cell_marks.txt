@@ -1,0 +1,143 @@
+Function fnColumnNumberToLetter(lColNum As Variant) As String
+  If (lColNum > Columns.Count) Then
+    MsgBox ("Index exceeds maximum columns allowed.")
+    Exit Function
+  End If
+  Dim strColumn As String
+  Dim sLetter1 As String
+  Dim sLetter2 As String
+  Dim sFirstLetter As String
+  Dim iInitialLetter As Integer
+  Dim iFirstLetter As Integer
+  Dim iSecondLetter As Integer
+  'Three letters?
+  If (lColNum > 702) Then
+    iInitialLetter = Int((lColNum - 703) / 676)
+    iInitialLetter = iInitialLetter + 65
+    sFirstLetter = Chr(iInitialLetter)
+  Else
+    sFirstLetter = ""
+  End If
+  'Second letter?
+  iFirstLetter = Int(((lColNum - 1 - 26) Mod 676) / 26)
+  iFirstLetter = iFirstLetter + 65
+  If (iFirstLetter > 64) Then
+    sLetter1 = Chr(iFirstLetter)
+  Else
+    sLetter1 = ""
+  End If
+  'This letter always exists!
+  iSecondLetter = (lColNum Mod 26)
+  If (iSecondLetter = 0) Then
+    iSecondLetter = 26
+  End If
+  iSecondLetter = iSecondLetter + 64
+  sLetter2 = Chr(iSecondLetter)
+  'Puts togehter the result…
+  strColumn = Trim(sFirstLetter & sLetter1 & sLetter2)
+  fnColumnNumberToLetter = strColumn
+End Function
+
+Function createMark(sheetIndex As Variant, rowIndex As Variant, columnIndex As Variant) As String
+  createMark = Replace("{" & Str(sheetIndex) & "|" & fnColumnNumberToLetter(columnIndex) & Str(rowIndex) & "}", " ", "")
+End Function
+
+Function createMarkValue(sheetIndex As Variant, rowIndex As Variant, columnIndex As Variant) As String
+  createMarkValue = "=VALUE(""" & createMark(sheetIndex, rowIndex, columnIndex) & """)"
+End Function
+
+Sub insert_marks()
+  'Osztályonkénti bontás(E)+(GY)
+  For oszlop = 1 To 26
+    For sor = 4 To 50
+      For i = 0 To 1
+        j = sor + i * 53
+        Munka1.Cells(j, oszlop) = createMarkValue(0, j, oszlop)
+        Munka8.Cells(j, oszlop) = createMarkValue(1, j, oszlop)
+      Next i
+    Next sor
+  Next oszlop
+  
+  'Helyettesítés
+  For oszlop = 1 To 5
+    For sor = 7 To 52
+      For i = 0 To 1
+        j = sor + i * 55
+        Munka6.Cells(j, oszlop) = createMark(2, j, oszlop)
+      Next i
+    Next sor
+  Next oszlop
+  
+  For oszlop = 6 To 9
+    For sor = 7 To 52
+      For i = 0 To 1
+        j = sor + i * 55
+        Munka6.Cells(j, oszlop) = createMarkValue(2, j, oszlop)
+      Next i
+    Next sor
+  Next oszlop
+  
+  'Hiányzás
+  For oszlop = 1 To 2
+    For sor = 6 To 55
+      For i = 0 To 1
+        j = sor + i * 58
+        Munka12.Cells(j, oszlop) = createMark(3, j, oszlop)
+      Next i
+    Next sor
+  Next oszlop
+  
+  For oszlop = 3 To 5
+    For sor = 6 To 55
+      For i = 0 To 1
+        j = sor + i * 58
+        Munka12.Cells(j, oszlop) = createMarkValue(3, j, oszlop)
+      Next i
+    Next sor
+  Next oszlop
+  
+  'Tanórán kívüli tev.
+  For oszlop = 1 To 2
+    For sor = 8 To 52
+      Munka10.Cells(sor, oszlop) = createMark(4, sor, oszlop)
+    Next sor
+  Next oszlop
+  
+  For oszlop = 3 To 10
+    For sor = 8 To 52
+      Munka10.Cells(sor, oszlop) = createMarkValue(4, sor, oszlop)
+    Next sor
+  Next oszlop
+  
+  'Pedagógus nyilvántartás(E)
+  Munka2.Cells(1, 6) = createMark(5, 1, 6)
+  
+  'Teljesítménymutató
+  Munka3.Cells(5, 9) = createMarkValue(8, 5, 9)
+  Munka3.Cells(5, 11) = createMarkValue(8, 5, 11)
+  
+  '40 óra
+  For sor = 4 To 53
+    Munka4.Cells(sor, 11) = createMark(9, sor, 11)
+  Next sor
+  
+  'Órák
+  For oszlop = 3 To 23 Step 5
+    For sor = 6 To 24 Step 2
+      Munka5.Cells(sor, oszlop) = createMarkValue(10, sor, oszlop)
+    Next sor
+  Next oszlop
+  
+  'Napok
+  Munka11.Cells(3, 2) = createMark(11, 3, 2)
+  Munka11.Cells(5, 2) = createMark(11, 5, 2)
+  Munka11.Cells(7, 2) = createMark(11, 7, 2)
+  Munka11.Cells(2, 3) = createMarkValue(11, 2, 3)
+  Munka11.Cells(2, 5) = createMark(11, 2, 5)
+  For oszlop = 13 To 14
+    For sor = 2 To 51
+      Munka11.Cells(sor, oszlop) = createMark(11, sor, oszlop)
+    Next sor
+  Next oszlop
+  
+End Sub

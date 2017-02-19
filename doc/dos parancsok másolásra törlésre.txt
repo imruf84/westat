@@ -1,0 +1,9 @@
+Könyvtárak teljes törlése (beleértve az alkönyvtárakat és a fájlokat is):
+
+rd könyvtár /S /Q (/S:törli az alkönyvtárakat és a fájlokat is, /Q:nem tesz fel kérdéseket)
+
+
+Teljes könyvtárak másolása:
+Ha nem adjuk meg a hova-t akkor a másolás célja az a könyvtár lesz, amelyben éppen vagyunk
+
+xcopy mit hova /E /C /R (/E:alkönyvtárakat is másol az üres alkönyvtárakat is beleértve, /C:hiba esetén folytatja a másolást, /R:felülírja a csak olvasható fájlokat, )

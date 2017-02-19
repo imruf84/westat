@@ -1,0 +1,28 @@
+Név			|Régi azonosító		|Új azonosító
+------------------------+-----------------------+--------------
+Szoboszlai Zsolt	|SzZs			|SzoZs
+Sztoklász Zsuzsa	|SzZs			|SzZsu
+Baracsy Zsolt		|BZ			|BarZso
+Barna Zoltán		|BZ			|BaZo
+Béda Zsuzsa		|BZ			|BZsu
+Batta Zsolt		|BZ			|BaZso
+Szalai Anikó		|SA			|SzaA
+Sebõk András		|SA			|SeA
+Szabó Csilla		|SZCS			|SzaCs
+Szõllõsi Csilla		|SzCs			|SzoCs
+Keresztesi János	|KJ			|KeJ
+Kléninger Józsefné	|KJ			|KlJ
+			|			|
+Munkatervezés, szerve-	|			|
+zési feladatok gyakor-	|MunGya			|MunSzGya
+lata			|			|
+			|			|
+Munka- és védõruha ké-	|			|
+szítés gyártástechno-	|MunGyá			|MunVGya
+lógiája			|			|
+			|			|
+Elektrotechnika alapjai	|ElAL			|ElTAl
+Elektronika alapjai	|ElAL			|ElNAL
+			|			|
+Szoftverismeretek	|SZoftism		|SZoftoism
+Szoftver ismeretek	|SZoftism		|SzoftSism

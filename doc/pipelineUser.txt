@@ -1,0 +1,30 @@
+I.
+a)
+A vezetõ bejelentkezik
+
+b)
+A felhasználó bejelentkezik
+
+II.
+a)
+A vezetõ elkészíti a hozzá tartozó felhasználók adatait az adott idõszakra
+(kézzel, vagy automatikusan az adatbázis adatai alapján)
+
+b)
+Ha még nincsenek az adott idõszakra adatai létrehozva, akkor
+(*esetleg) felajánlja a rendszer, hogy elkészíti a bejegyzéseket.
+(a másik lehetõség, hogy használat közben a kézi kitöltés rásegítésére
+ lehetne használni egyes adatok automatikus kitöltését)
+
+III.
+A felhasználó jóváhagyja a vezetõ számára a saját adatait, ezzel tudatva, 
+hogy az adatok helytállóak
+
+IV.
+A jóváhagyást látva a vezetõ elkezdi feldolgozni az adatokat (kiértékelés,
+nyomtatás stb)
+
+
+*Átgondolni, hogy a felhasználó létrehozhatja-e a bejegyzéseket?
+ A cél a felhasználó teljes kizárása a rendszerbõl lenne?!
+ A felhasználó csak ellenõrzési, esetleg javítási jogokat kapna?!

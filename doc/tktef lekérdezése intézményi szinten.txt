@@ -1,0 +1,7 @@
+SELECT felhasznalok.felhasznaloNev,datum,tantargyak.tantargyNev,oraszam,dijazott,csoportos
+FROM tktef
+LEFT JOIN felhasznalok ON felhasznalok.felhasznaloID=tktef.felhasznaloID
+LEFT JOIN tantargyak ON tantargyak.tantargyID=tktef.tantargyID
+WHERE idoszakID=1
+ORDER BY felhasznalok.felhasznaloNev,datum
+LIMIT 0,10000

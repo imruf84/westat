@@ -1,0 +1,17 @@
+User levels:
+
+[0]: admin: minden szolgáltatáshoz írási, olvasási jog, 
+       felhasználók felvétele, törlése, csoporthoz rendelése
+[1]: leader: bizonyos szolgáltatásokhoz, ill. minden felhasználóhoz (az admint kivéve) 
+       kap írási és olvasási jogot (intézményvezetõ)
+[2]: operator: csak a saját munkaközösségébe tartozó felhasználók adatainak olvasása,
+       írássa, jelentéseinek elkészítése
+[3]: user: csak a saját adatainak olvasása, bizonyos esetekben írása, esetleg
+       jelentések elkészítése (még tisztázni, hogy a jelentéseket csak módosíthassák
+       majd jóvá hagyják)
+[4]: guest: csak bizonyos adatok olvasása
+
+TIPP: Az egyes szintek jogait az adatbázisban tárolom.
+
+TIPP: Ezen kívül minden felhasználónak egyedileg adhatok majd jogokat
+      a szolgáltatások kezeléséhez.

@@ -1,0 +1,515 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultDir=D:\107\web\westat
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+Extensions=*.*
+[Project tree]
+westat
+	+westat
+		-doc
+			doc\dos parancsok másolásra törlésre.txt
+			doc\excel_insert_cell_marks.txt
+			doc\felasználói szintek.txt
+			doc\helyettesítések lekérdezése intézményi szinten.txt
+			doc\idõkeret_minta_no_makro_1_havi.xls
+			doc\idõkeret_minta_no_makro_1_havi_óraadó.xls
+			doc\idõkeret_minta_no_makro_1_havi_óraadó_új.xls
+			doc\idõkeret_minta_no_makro_1_havi_óraadó_új_túlóra.xls
+			doc\idõkeret_minta_no_makro_1_havi_óraadó_új_túlóra2.xls
+			doc\idõkeret_minta_no_makro_2_havi.xls
+			doc\idõszakok.txt
+			doc\ötletek.txt
+			doc\parancsok.txt
+			doc\pipeline.txt
+			doc\pipelineUser.txt
+			doc\SQL.txt
+			doc\tktef lekérdezése intézményi szinten.txt
+			doc\TODO.txt
+			doc\tudnivalok.txt
+		+lib
+			-adodb5
+				-contrib
+					lib\adodb5\contrib\toxmlrpc.inc.php
+				-datadict
+					lib\adodb5\datadict\datadict-access.inc.php
+					lib\adodb5\datadict\datadict-db2.inc.php
+					lib\adodb5\datadict\datadict-firebird.inc.php
+					lib\adodb5\datadict\datadict-generic.inc.php
+					lib\adodb5\datadict\datadict-ibase.inc.php
+					lib\adodb5\datadict\datadict-informix.inc.php
+					lib\adodb5\datadict\datadict-mssql.inc.php
+					lib\adodb5\datadict\datadict-mssqlnative.inc.php
+					lib\adodb5\datadict\datadict-mysql.inc.php
+					lib\adodb5\datadict\datadict-oci8.inc.php
+					lib\adodb5\datadict\datadict-postgres.inc.php
+					lib\adodb5\datadict\datadict-sapdb.inc.php
+					lib\adodb5\datadict\datadict-sqlite.inc.php
+					lib\adodb5\datadict\datadict-sybase.inc.php
+				-drivers
+					lib\adodb5\drivers\adodb-access.inc.php
+					lib\adodb5\drivers\adodb-ado.inc.php
+					lib\adodb5\drivers\adodb-ado_access.inc.php
+					lib\adodb5\drivers\adodb-ado_mssql.inc.php
+					lib\adodb5\drivers\adodb-ado5.inc.php
+					lib\adodb5\drivers\adodb-ads.inc.php
+					lib\adodb5\drivers\adodb-borland_ibase.inc.php
+					lib\adodb5\drivers\adodb-csv.inc.php
+					lib\adodb5\drivers\adodb-db2.inc.php
+					lib\adodb5\drivers\adodb-db2oci.inc.php
+					lib\adodb5\drivers\adodb-db2ora.inc.php
+					lib\adodb5\drivers\adodb-fbsql.inc.php
+					lib\adodb5\drivers\adodb-firebird.inc.php
+					lib\adodb5\drivers\adodb-ibase.inc.php
+					lib\adodb5\drivers\adodb-informix.inc.php
+					lib\adodb5\drivers\adodb-informix72.inc.php
+					lib\adodb5\drivers\adodb-ldap.inc.php
+					lib\adodb5\drivers\adodb-mssql.inc.php
+					lib\adodb5\drivers\adodb-mssql_n.inc.php
+					lib\adodb5\drivers\adodb-mssqlnative.inc.php
+					lib\adodb5\drivers\adodb-mssqlpo.inc.php
+					lib\adodb5\drivers\adodb-mysql.inc.php
+					lib\adodb5\drivers\adodb-mysqli.inc.php
+					lib\adodb5\drivers\adodb-mysqlpo.inc.php
+					lib\adodb5\drivers\adodb-mysqlt.inc.php
+					lib\adodb5\drivers\adodb-netezza.inc.php
+					lib\adodb5\drivers\adodb-oci8.inc.php
+					lib\adodb5\drivers\adodb-oci805.inc.php
+					lib\adodb5\drivers\adodb-oci8po.inc.php
+					lib\adodb5\drivers\adodb-odbc.inc.php
+					lib\adodb5\drivers\adodb-odbc_db2.inc.php
+					lib\adodb5\drivers\adodb-odbc_mssql.inc.php
+					lib\adodb5\drivers\adodb-odbc_oracle.inc.php
+					lib\adodb5\drivers\adodb-odbtp.inc.php
+					lib\adodb5\drivers\adodb-odbtp_unicode.inc.php
+					lib\adodb5\drivers\adodb-oracle.inc.php
+					lib\adodb5\drivers\adodb-pdo.inc.php
+					lib\adodb5\drivers\adodb-pdo_mssql.inc.php
+					lib\adodb5\drivers\adodb-pdo_mysql.inc.php
+					lib\adodb5\drivers\adodb-pdo_oci.inc.php
+					lib\adodb5\drivers\adodb-pdo_pgsql.inc.php
+					lib\adodb5\drivers\adodb-pdo_sqlite.inc.php
+					lib\adodb5\drivers\adodb-postgres.inc.php
+					lib\adodb5\drivers\adodb-postgres64.inc.php
+					lib\adodb5\drivers\adodb-postgres7.inc.php
+					lib\adodb5\drivers\adodb-postgres8.inc.php
+					lib\adodb5\drivers\adodb-proxy.inc.php
+					lib\adodb5\drivers\adodb-sapdb.inc.php
+					lib\adodb5\drivers\adodb-sqlanywhere.inc.php
+					lib\adodb5\drivers\adodb-sqlite.inc.php
+					lib\adodb5\drivers\adodb-sqlitepo.inc.php
+					lib\adodb5\drivers\adodb-sybase.inc.php
+					lib\adodb5\drivers\adodb-sybase_ase.inc.php
+					lib\adodb5\drivers\adodb-vfp.inc.php
+				-lang
+					lib\adodb5\lang\adodb_th.inc.php
+					lib\adodb5\lang\adodb-ar.inc.php
+					lib\adodb5\lang\adodb-bg.inc.php
+					lib\adodb5\lang\adodb-bgutf8.inc.php
+					lib\adodb5\lang\adodb-ca.inc.php
+					lib\adodb5\lang\adodb-cn.inc.php
+					lib\adodb5\lang\adodb-cz.inc.php
+					lib\adodb5\lang\adodb-da.inc.php
+					lib\adodb5\lang\adodb-de.inc.php
+					lib\adodb5\lang\adodb-en.inc.php
+					lib\adodb5\lang\adodb-es.inc.php
+					lib\adodb5\lang\adodb-esperanto.inc.php
+					lib\adodb5\lang\adodb-fa.inc.php
+					lib\adodb5\lang\adodb-fr.inc.php
+					lib\adodb5\lang\adodb-hu.inc.php
+					lib\adodb5\lang\adodb-it.inc.php
+					lib\adodb5\lang\adodb-nl.inc.php
+					lib\adodb5\lang\adodb-pl.inc.php
+					lib\adodb5\lang\adodb-pt-br.inc.php
+					lib\adodb5\lang\adodb-ro.inc.php
+					lib\adodb5\lang\adodb-ru1251.inc.php
+					lib\adodb5\lang\adodb-sv.inc.php
+					lib\adodb5\lang\adodb-uk1251.inc.php
+				-pear
+					-Auth
+						-Container
+							lib\adodb5\pear\Auth\Container\ADOdb.php
+					lib\adodb5\pear\readme.Auth.txt
+				-perf
+					lib\adodb5\perf\perf-db2.inc.php
+					lib\adodb5\perf\perf-informix.inc.php
+					lib\adodb5\perf\perf-mssql.inc.php
+					lib\adodb5\perf\perf-mssqlnative.inc.php
+					lib\adodb5\perf\perf-mysql.inc.php
+					lib\adodb5\perf\perf-oci8.inc.php
+					lib\adodb5\perf\perf-postgres.inc.php
+				-session
+					-old
+						lib\adodb5\session\old\adodb-cryptsession.php
+						lib\adodb5\session\old\adodb-session.php
+						lib\adodb5\session\old\adodb-session-clob.php
+						lib\adodb5\session\old\crypt.inc.php
+					lib\adodb5\session\adodb-compress-bzip2.php
+					lib\adodb5\session\adodb-compress-gzip.php
+					lib\adodb5\session\adodb-cryptsession.php
+					lib\adodb5\session\adodb-cryptsession2.php
+					lib\adodb5\session\adodb-encrypt-mcrypt.php
+					lib\adodb5\session\adodb-encrypt-md5.php
+					lib\adodb5\session\adodb-encrypt-secret.php
+					lib\adodb5\session\adodb-encrypt-sha1.php
+					lib\adodb5\session\adodb-sess.txt
+					lib\adodb5\session\adodb-session.php
+					lib\adodb5\session\adodb-session2.php
+					lib\adodb5\session\adodb-session-clob.php
+					lib\adodb5\session\adodb-session-clob2.php
+					lib\adodb5\session\adodb-sessions.mysql.sql
+					lib\adodb5\session\adodb-sessions.oracle.clob.sql
+					lib\adodb5\session\adodb-sessions.oracle.sql
+					lib\adodb5\session\crypt.inc.php
+					lib\adodb5\session\session_schema.xml
+					lib\adodb5\session\session_schema2.xml
+				-xsl
+					lib\adodb5\xsl\convert-0.1-0.2.xsl
+					lib\adodb5\xsl\convert-0.1-0.3.xsl
+					lib\adodb5\xsl\convert-0.2-0.1.xsl
+					lib\adodb5\xsl\convert-0.2-0.3.xsl
+					lib\adodb5\xsl\remove-0.2.xsl
+					lib\adodb5\xsl\remove-0.3.xsl
+				lib\adodb5\adodb.inc.php
+				lib\adodb5\adodb-active-record.inc.php
+				lib\adodb5\adodb-active-recordx.inc.php
+				lib\adodb5\adodb-csvlib.inc.php
+				lib\adodb5\adodb-datadict.inc.php
+				lib\adodb5\adodb-error.inc.php
+				lib\adodb5\adodb-errorhandler.inc.php
+				lib\adodb5\adodb-errorpear.inc.php
+				lib\adodb5\adodb-exceptions.inc.php
+				lib\adodb5\adodb-iterator.inc.php
+				lib\adodb5\adodb-lib.inc.php
+				lib\adodb5\adodb-memcache.lib.inc.php
+				lib\adodb5\adodb-pager.inc.php
+				lib\adodb5\adodb-pear.inc.php
+				lib\adodb5\adodb-perf.inc.php
+				lib\adodb5\adodb-php4.inc.php
+				lib\adodb5\adodb-time.inc.php
+				lib\adodb5\adodb-xmlschema.inc.php
+				lib\adodb5\adodb-xmlschema03.inc.php
+				lib\adodb5\license.txt
+				lib\adodb5\pivottable.inc.php
+				lib\adodb5\readme.txt
+				lib\adodb5\rsfilter.inc.php
+				lib\adodb5\server.php
+				lib\adodb5\toexport.inc.php
+				lib\adodb5\tohtml.inc.php
+				lib\adodb5\xmlschema.dtd
+				lib\adodb5\xmlschema03.dtd
+			-excel
+				-reader
+					lib\excel\reader\oleread.inc
+					lib\excel\reader\reader.php
+			-pic
+				lib\pic\loadingAnimBig.gif
+			+services
+				+idokeret
+					lib\services\idokeret\Idokeret.js
+				lib\services\Service.js
+			+tools
+				-csoportok
+					lib\tools\csoportok\CCsoportok.php
+					lib\tools\csoportok\Csoportok.js
+					lib\tools\csoportok\csoportok.php
+					lib\tools\csoportok\CsoportokComboBox.js
+					lib\tools\csoportok\CsoportokForm.js
+				-egyeniorakedv
+					lib\tools\egyeniorakedv\CEgyeniorakedv.php
+					lib\tools\egyeniorakedv\Egyeniorakedv.js
+					lib\tools\egyeniorakedv\egyeniorakedv.php
+					lib\tools\egyeniorakedv\EgyeniorakedvForm.js
+				-felhasznalok
+					lib\tools\felhasznalok\CFelhasznalok.php
+					lib\tools\felhasznalok\Felhasznalok.js
+					lib\tools\felhasznalok\felhasznalok.php
+					lib\tools\felhasznalok\FelhasznalokAllComboBox.js
+					lib\tools\felhasznalok\FelhasznalokComboBox.js
+					lib\tools\felhasznalok\FelhasznalokForm.js
+					lib\tools\felhasznalok\FelhasznalotipusaiComboBox.js
+				+helyettesitesek
+					lib\tools\helyettesitesek\CHelyettesitesek.php
+					lib\tools\helyettesitesek\Helyettesitesek.js
+					lib\tools\helyettesitesek\helyettesitesek.php
+					lib\tools\helyettesitesek\HelyettesitesekForm.js
+				-helyettesitestipusai
+					lib\tools\helyettesitestipusai\CHelyettesitestipusai.php
+					lib\tools\helyettesitestipusai\Helyettesitestipusai.js
+					lib\tools\helyettesitestipusai\helyettesitestipusai.php
+					lib\tools\helyettesitestipusai\HelyettesitestipusaiComboBox.js
+					lib\tools\helyettesitestipusai\HelyettesitestipusaiForm.js
+				-helyettnaplo
+					lib\tools\helyettnaplo\CHelyettnaplo.php
+					lib\tools\helyettnaplo\Helyettnaplo.js
+					lib\tools\helyettnaplo\helyettnaplo.php
+				-hianyzasok
+					lib\tools\hianyzasok\CHianyzasok.php
+					lib\tools\hianyzasok\Hianyzasok.js
+					lib\tools\hianyzasok\hianyzasok.php
+					lib\tools\hianyzasok\HianyzasokForm.js
+				-hianyzasokai
+					lib\tools\hianyzasokai\CHianyzasokai.php
+					lib\tools\hianyzasokai\Hianyzasokai.js
+					lib\tools\hianyzasokai\hianyzasokai.php
+					lib\tools\hianyzasokai\HianyzasokaiComboBox.js
+					lib\tools\hianyzasokai\HianyzasokaiForm.js
+				-hihebetolt
+					lib\tools\hihebetolt\CHihebetolt.php
+					lib\tools\hihebetolt\Hihebetolt.js
+					lib\tools\hihebetolt\hihebetolt.php
+					lib\tools\hihebetolt\HihebetoltForm.js
+				-idoszakok
+					lib\tools\idoszakok\CIdoszakok.php
+					lib\tools\idoszakok\IdoszakAsArray.php
+					lib\tools\idoszakok\Idoszakok.js
+					lib\tools\idoszakok\idoszakok.php
+					lib\tools\idoszakok\IdoszakokComboBox.js
+					lib\tools\idoszakok\IdoszakokForm.js
+				-jelentesek
+					lib\tools\jelentesek\CJelentesek.php
+					lib\tools\jelentesek\converter.xls
+					lib\tools\jelentesek\converter_no_quit_no_convert_1_havi.xls
+					lib\tools\jelentesek\converter_no_quit_no_convert_1_havi_oraado.xls
+					lib\tools\jelentesek\converter_no_quit_no_convert_2_havi.xls
+					lib\tools\jelentesek\converter_oraado.xls
+					lib\tools\jelentesek\Jelentesek.js
+					lib\tools\jelentesek\jelentesek.php
+					lib\tools\jelentesek\JelentesekExcel.php
+					lib\tools\jelentesek\JelentesekForm.js
+					lib\tools\jelentesek\JelentestipusaiComboBox.js
+					lib\tools\jelentesek\report_tempelate_oraado.xml
+				-jelszavak
+					lib\tools\jelszavak\CJelszavak.php
+					lib\tools\jelszavak\Jelszavak.js
+					lib\tools\jelszavak\jelszavak.php
+					lib\tools\jelszavak\JelszavakForm.js
+				-kiadottparancsok
+					lib\tools\kiadottparancsok\Kiadottparancsok.php
+				-kotelezoorak
+					lib\tools\kotelezoorak\CKotelezoorak.php
+					lib\tools\kotelezoorak\Kotelezoorak.js
+					lib\tools\kotelezoorak\kotelezoorak.php
+					lib\tools\kotelezoorak\KotelezoorakForm.js
+				-lezarasok
+					lib\tools\lezarasok\CLezarasok.php
+					lib\tools\lezarasok\Lezarasok.js
+					lib\tools\lezarasok\lezarasok.php
+					lib\tools\lezarasok\LezarasokForm.js
+				-login
+					lib\tools\login\CLogin.php
+					lib\tools\login\Login.js
+					lib\tools\login\login.php
+					lib\tools\login\LoginComboBox.js
+					lib\tools\login\LoginConstants.js
+				+orak
+					lib\tools\orak\COrak.php
+					lib\tools\orak\orak.php
+					lib\tools\orak\OrakForm.js
+				+orarendek
+					lib\tools\orarendek\COrarendek.php
+					lib\tools\orarendek\OrarendBetujeleiComboBox.js
+					lib\tools\orarendek\Orarendek.js
+					lib\tools\orarendek\orarendek.php
+					lib\tools\orarendek\OrarendekComboBox.js
+					lib\tools\orarendek\OrarendekForm.js
+					lib\tools\orarendek\OrarendHetekComboBox.js
+				-osztalycimkek
+					lib\tools\osztalycimkek\COsztalyCimkek.php
+					lib\tools\osztalycimkek\OsztalyCimkek.js
+					lib\tools\osztalycimkek\osztalycimkek.php
+					lib\tools\osztalycimkek\OsztalyCimkekComboBox.js
+					lib\tools\osztalycimkek\OsztalyCimkekForm.js
+				-osztalycsoportok
+					lib\tools\osztalycsoportok\COsztalyCsoportok.php
+					lib\tools\osztalycsoportok\OsztalyCsoportok.js
+					lib\tools\osztalycsoportok\osztalycsoportok.php
+					lib\tools\osztalycsoportok\OsztalyCsoportokForm.js
+				+osztalyok
+					lib\tools\osztalyok\COsztalyok.php
+					lib\tools\osztalyok\Osztalyok.js
+					lib\tools\osztalyok\osztalyok.php
+					lib\tools\osztalyok\OsztalyokComboBox.js
+					lib\tools\osztalyok\OsztalyokForm.js
+					lib\tools\osztalyok\OsztalytipusaiComboBox.js
+				+osztalyokcimkei
+					lib\tools\osztalyokcimkei\COsztalyokCimkei.php
+					lib\tools\osztalyokcimkei\OsztalyokCimkei.js
+					lib\tools\osztalyokcimkei\osztalyokcimkei.php
+					lib\tools\osztalyokcimkei\OsztalyokCimkeiForm.js
+				-rnapok
+					lib\tools\rnapok\CRnapok.php
+					lib\tools\rnapok\Rnapok.js
+					lib\tools\rnapok\rnapok.php
+					lib\tools\rnapok\RnapokForm.js
+					lib\tools\rnapok\RnaptipusaiComboBox.js
+				-szakmacsoportok
+					lib\tools\szakmacsoportok\CSzakmaCsoportok.php
+					lib\tools\szakmacsoportok\SzakmaCsoportok.js
+					lib\tools\szakmacsoportok\szakmacsoportok.php
+					lib\tools\szakmacsoportok\SzakmaCsoportokComboBox.js
+					lib\tools\szakmacsoportok\SzakmaCsoportokForm.js
+				-tanevek
+					lib\tools\tanevek\CTanevek.php
+					lib\tools\tanevek\Tanevek.js
+					lib\tools\tanevek\tanevek.php
+					lib\tools\tanevek\TanevekComboBox.js
+					lib\tools\tanevek\TanevekForm.js
+				-tantargyak
+					lib\tools\tantargyak\CTantargyak.php
+					lib\tools\tantargyak\Tantargyak.js
+					lib\tools\tantargyak\tantargyak.php
+					lib\tools\tantargyak\TantargyakComboBox.js
+					lib\tools\tantargyak\TantargyakForm.js
+				+tantargyakcimkei
+					lib\tools\tantargyakcimkei\CTantargyakCimkei.php
+					lib\tools\tantargyakcimkei\TantargyakCimkei.js
+					lib\tools\tantargyakcimkei\tantargyakcimkei.php
+					lib\tools\tantargyakcimkei\TantargyakCimkeiForm.js
+				-tantargycimkek
+					lib\tools\tantargycimkek\CTantargyCimkek.php
+					lib\tools\tantargycimkek\TantargyCimkek.js
+					lib\tools\tantargycimkek\tantargycimkek.php
+					lib\tools\tantargycimkek\TantargyCimkekComboBox.js
+					lib\tools\tantargycimkek\TantargyCimkekForm.js
+				-tantargyelsz
+					lib\tools\tantargyelsz\CTantargyelsz.php
+					lib\tools\tantargyelsz\SzakfeladattipusaiComboBox.js
+					lib\tools\tantargyelsz\Tantargyelsz.js
+					lib\tools\tantargyelsz\tantargyelsz.php
+					lib\tools\tantargyelsz\TantargyelszForm.js
+					lib\tools\tantargyelsz\TantargyelsztipusaiComboBox.js
+				-tktef
+					lib\tools\tktef\CTktef.php
+					lib\tools\tktef\Tktef.js
+					lib\tools\tktef\tktef.php
+					lib\tools\tktef\TktefForm.js
+				-tktefnaplo
+					lib\tools\tktefnaplo\CTktefnaplo.php
+					lib\tools\tktefnaplo\Tktefnaplo.js
+					lib\tools\tktefnaplo\tktefnaplo.php
+				lib\tools\TableTool.js
+				lib\tools\Tool.js
+			-widgets
+				lib\widgets\Button.js
+				lib\widgets\ComboBoxField.js
+				lib\widgets\Control.js
+				lib\widgets\DateField.js
+				lib\widgets\DbComboBox.js
+				lib\widgets\Dialog.js
+				lib\widgets\Field.js
+				lib\widgets\FileInputField.js
+				lib\widgets\Form.js
+				lib\widgets\FormDialog.js
+				lib\widgets\InputField.js
+				lib\widgets\Label.js
+				lib\widgets\LabelField.js
+				lib\widgets\LoadingDialog.js
+				lib\widgets\NSControl.js
+				lib\widgets\PasswordInputField.js
+				lib\widgets\Widget.js
+				lib\widgets\YesNoComboBox.js
+			-zip
+				lib\zip\pclzip.lib.php
+			lib\Ajax.js
+			lib\AjaxRequest.js
+			lib\arrayFromQuery.php
+			lib\Base.js
+			lib\BaseClass.js
+			lib\BrowserDetect.js
+			lib\cal.gif
+			lib\CalendarPopup.js
+			lib\CField.php
+			lib\CharCoding.php
+			lib\config.php
+			lib\CResponse.php
+			lib\CTestString.php
+			lib\CWorkingDir.php
+			lib\CService.php
+			lib\dateDiff.php
+			lib\dbExec.php
+			lib\HelpfulTools.js
+			lib\json2.js
+			lib\KeyManager.js
+			lib\LinkedList.js
+			lib\ModuleManager.js
+			lib\MyMath.js
+			lib\r_implode.php
+			lib\ResizeManager.js
+			lib\response.php
+			lib\System.js
+			lib\Utf8Chars.js
+		-sql
+			-orarend_betoltes_teendoi
+				sql\orarend_betoltes_teendoi\allando_helyettesitesek.sql
+				sql\orarend_betoltes_teendoi\antinak.sql
+				sql\orarend_betoltes_teendoi\konyvtaros_orak.sql
+				sql\orarend_betoltes_teendoi\orarendi_uj_nevek.txt
+				sql\orarend_betoltes_teendoi\orarent_betoltese_teendok.txt
+			sql\create_db.sql
+			sql\create_db_tables.sql
+			sql\drop_db_tables.sql
+			sql\kotelezoorak_masolasa.sql
+			sql\osztályok tantárgyainak és tanárainak a lekérdezése.txt
+			sql\set_auto_increment_value.sql
+		-uploads
+			-hihebetolt
+				uploads\hihebetolt\2011_09_helyettesítés.xls
+				uploads\hihebetolt\2011_10_helyettesítés.xls
+				uploads\hihebetolt\2011_11_helyettesítés.xls
+				uploads\hihebetolt\2011_12_helyettesítés.xls
+				uploads\hihebetolt\2012_04_helyettesítés.xls
+				uploads\hihebetolt\2012_05_helyettesítés.xls
+		-utils
+			utils\batch_converter.xls
+			utils\differences.xls
+		changes_2012_2013.txt
+		copy.bat
+		CopyFiles.vbs
+		history.txt
+		index.php
+		TODO.txt
+		westat_project.ppr
+[Open project files]
+0=lib\Utf8Chars.js
+1=lib\CService.php
+2=lib\tools\helyettesitesek\CHelyettesitesek.php
+3=lib\tools\orarendek\COrarendek.php
+4=lib\tools\tantargyakcimkei\CTantargyakCimkei.php
+5=lib\tools\osztalyokcimkei\COsztalyokCimkei.php
+6=lib\services\Service.js
+7=lib\tools\osztalyok\OsztalytipusaiComboBox.js
+[Selected Project Files]
+Main=
+Selected=lib\tools\orarendek\COrarendek.php
+[lib\Utf8Chars.js]
+TopLine=1
+Caret=21,3
+[lib\CService.php]
+TopLine=829
+Caret=131,841
+[lib\tools\helyettesitesek\CHelyettesitesek.php]
+TopLine=97
+Caret=54,101
+[lib\tools\orarendek\COrarendek.php]
+TopLine=488
+Caret=41,508
+[lib\tools\tantargyakcimkei\CTantargyakCimkei.php]
+TopLine=44
+Caret=38,56
+[lib\tools\osztalyokcimkei\COsztalyokCimkei.php]
+TopLine=44
+Caret=36,65
+[lib\services\Service.js]
+TopLine=194
+Caret=62,211
+[lib\tools\osztalyok\OsztalytipusaiComboBox.js]
+TopLine=1
+Caret=25,26

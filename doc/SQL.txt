@@ -1,0 +1,8 @@
+SELECT CONCAT(20,SUBSTRING(orarendID,8,2),"-",SUBSTRING(orarendID,10,2),"-",SUBSTRING(orarendID,12,2)) AS datum FROM orarendek HAVING datum="2010-09-27" ORDER BY datum DESC
+SELECT CONCAT(20,SUBSTRING(orarendID,8,2),"-",SUBSTRING(orarendID,10,2),"-",SUBSTRING(orarendID,12,2)) AS datum FROM orarendek HAVING datum="2010-09-27"
+
+SELECT CONCAT(20,SUBSTRING(orarendID,8,2),"-",SUBSTRING(orarendID,10,2),"-",SUBSTRING(orarendID,12,2)) AS datum FROM orarendek HAVING datum BETWEEN "2010-09-13" AND "2010-10-11"
+
+SELECT FirstName, LastName FROM Users WHERE DateOfBirth BETWEEN '02/03/1970' AND '10/10/1972'
+
+SELECT * FROM hianyzasok WHERE felhasznaloID=3 AND datum<"2010-10-10" AND datum>"2010-09-20" GROUP BY datum ORDER BY datum

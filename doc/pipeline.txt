@@ -1,0 +1,38 @@
+   ----------------------------------------
+-->|Login: Bekérjük a felhasználó adatait.|
+|  ----------------------------------------
+|     |
+|     | Ha minden stimmel (egyezik a jelszó+felhasználói név stb.)
+|     |
+|  -----------------------------------------------------------------------
+|  |Service: Lekérjük a felhasználó adatait a szerver oldalon (session), |
+|  |ezeket visszaküldjük, majd a visszaküldött adatok alapján            |
+|  |létrehozzuk a kliens oldali felületet.                               |
+|  -----------------------------------------------------------------------
+|     |
+|     | Ha a felhasználó jogosultságai engedik, akkor választhat
+|     |  a szolgáltatás eszközeibõl
+|     |
+|  ----------------------------------------------------------------
+|  |Tool: A szolgáltatáson keresztül használhatjuk az eszközöket, |
+|  |amelyekkel (megfelelõ jogok birtokában) hatást gyakorolhatunk |
+|  |az adatbázisra, illetve az adatokra.                          |
+|  |Az eszköz használata során a szerver oldalon történik a jogok |
+|  |ismételt ellenörzése (a szolgáltatás már lekérdezte a         |
+|  |felhasználó adatait).                                         |
+|  ----------------------------------------------------------------
+|     |
+|     | A munka befejeztével a felhasználó kijelentkezik a szolgáltatásból
+|     |
+|  --------------------------------------------------------------------
+|  |Logout: Szerver oldalon töröljük a felhasználó adatait (session), |
+|  |majd töröljük a kliensoldal felületét.                            |
+|  --------------------------------------------------------------------
+|     |
+|     | Kijelentkezés után a folyamat kezdõdik elõröl
+|     |
+-------
+
+Általánosan használható eszközök:
+ GroupManager: felhasználói csoportok managelése
+ UserManager: felhasználók managelése

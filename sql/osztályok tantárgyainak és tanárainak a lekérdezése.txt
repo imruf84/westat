@@ -1,0 +1,18 @@
+SELECT DISTINCT osztalyNev, tantargyNev, felhasznaloNev 
+
+FROM orak
+ 
+LEFT JOIN osztalyok ON osztalyok.osztalyID=orak.osztalyID 
+
+LEFT JOIN tantargyak ON tantargyak.tantargyID=orak.tantargyID 
+
+LEFT JOIN felhasznalok ON felhasznalok.felhasznaloID=orak.felhasznaloID 
+
+WHERE 
+orak.orarendID IN (
+SELECT MAX(orarendek.orarendID) FROM orarendek 
+ WHERE orarendek.tanevID IN (
+SELECT MAX(tanevek.tanevID) FROM tanevek)
+) 
+
+ORDER BY osztalyNev, tantargyNev, felhasznaloNev

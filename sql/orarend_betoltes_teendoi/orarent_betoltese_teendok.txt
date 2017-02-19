@@ -1,0 +1,12 @@
+Új órarend betöltése elõtti teendõk:
+====================================
+
+- az "orarendi_uj_nevek.txt" állomány tartalma alapján meg kell változtatni a tanárok/tantárgyak órarendi neveit,
+ezzel elkerülve a névismétlõdéseket
+
+Új órarend betöltése utáni teendõk:
+===================================
+
+- az "allando_helyettesitesek.sql" allomány segítségével törölni kell az állandó helyettesítéseket
+- az "antinak.sql" állomány alapján törölni kell az adott felhasználók adott tantárgyait (szakkörök)
+- könyvtáros órák hozzáadása a "konyvtaros_orak.sql" alapján

@@ -1,0 +1,113 @@
+Helyettesítések/Hiányzások:
+ - adatbázis táblák létrehozása
+ - adatok kezelése kézzel (szûrõvel ellátott eszköz szükséges hozzá)
+   NOTE: - a szûrõn kiválasztva a megfelelõ értékeket (tanév, idõszak)
+ - adatok betöltése állományból
+ - az adatokat külön táblában tároljuk vagy a hiányzások táblában egy mezõ tárolja majd a helyettesítõ tanár 
+   azonosítóját
+   NOTE: - az utóbbi tûnik a jobb megoldásnak
+         - a helyettesítõ tanárt azonnal a hiányzás felvételekor meg lehet adni
+ - a felhasználó ellenörzés céljából mindkét táblát láthatja külön-külön, esetleg módosítva azt
+   NOTE: - megfontolni, hogy a helyettesítéseket módosíthassák-e a felhasználók?
+           NOTE: - ahoz, hogy helyettesítést felvegyen lennie kell hiányzónak is, akit fel kell venni,
+                   viszont más adatával csak minimum az operátor rendelkezhet az adott csoport felett
+                 - esetleg olyan listából választhatna, akit még nem helyettesítettek
+                   NOTE: - ez jónak tûnik
+                 - csak a hiányzásokat adhassa hozzá, illetve azt, hogy ki helyettesítette 
+                   (egyenlõre ez a legjobb ötlet)
+ - a hiányzásokhoz nem csak a dátumot, de az elmaradt óra sorszámát is tárolni kell (hanyadik órát nem tartotta meg)
+   NOTE: - lehet olyan eset, hogy valaki csak pár óráról hiányzik
+         - lehet olyan akinek aznap nincs órája, de bent van (0 órát tart aznap)
+ - helyettesítések típusai:
+   f1 hiányzik t1 tantárgyról az o1 osztálynál n1 napon i1. óráról.
+
+   f1-et helyettesítheti:
+
+     1. f2, akinek n1 napon nincs i1. órája (Áthelyezés)
+     2. f2, akinek n1 napon i1. órája van o1 osztály egy másik csoportjával (összevonás)
+     3. f2, akinek n1 napon i1. órája van o2 osztállyal (összevonás, vagy áthelyezés???)
+        NOTE: - szerintem áthelyezés
+
+ - szûrõk alkalmazása:
+   1. Tanév
+   2. Idõszak
+   3. Helyettesítések/Hiányzások
+      NOTE: - a kezzõ közül csak az egyik választható
+
+ - Tábla elképzelés:
+     felhasznaloID
+     osztalyID
+     tantargyID
+     datum
+     tipus (Áthelyezés=0,összevonás=1)
+     sorszam (azt jelenti, hogy hanyadik órát nem tartotta meg)
+     helyettesitoID (a helyettesítõ tanár azonosítója)
+
+Form:
+ - form hozzáadása form-hoz
+ - gombok és egyéb nem mezõ típusú vezérlõk hozzáadása
+ - dinamikusan bõvülõ/csökkenõ mezõszámû form létrehozása
+   NOTE: - a mezõszámokat a formba ágyazott vezérlõkkel lehet majd szabályozni
+
+Filter:
+ - lehetne egy InputField/ComboBoxField páros, ahol az utóbbi a mezõt az elõbbi pedig az értéket tárolná
+   NOTE: - így tetszõlegesen lehetne megadni mezõértékeket
+         - a szûrõk logikai értékeinek kezelését megoldani!!!
+
+Tantárgyak:
+ - megadni minden tantárgynál, hogy elméleti vagy gyakorlati tárgy
+   NOTE: - ez azért fontos, mert az idõkereten külön van bontva elmélet és gyakorlat
+         - esetleg a csoportoknál is meg lehessen adni, hogy elméleti vagy gyakorlati? 
+           (nem jó abban az esetben ha vlk mind a két fajta tárgyat tanítja)
+
+Tanévek:
+ - különleges napok kezelése (TanevNapok)
+   NOTE: - szabadnapok kezelése
+         - naphoz fûzõdõ megjegyzések kezelése
+         - különleges napok típusai:
+           1. szabadnap (sem a tanároknak, sem pedig a diákoknak nem kell menni)
+           2. tanítás nélküli munkanap (csak a tanároknak kell menni meghatározott órát)
+           3. tanítási nap (minden óra meg van tartva)
+           4. rövidített nap (csak bizonyos számú óra van megtartva)
+           NOTE: - elõfordul, hogy csak bizonyos osztályokat érintenek a nappal kapcsolatos dolgok,
+                   ezért szükséges, hogy meg lehessen adni, hogy melyik osztályt érinti
+
+Idõszakok:
+ NOTE: - Tanévek eszköz szükséges
+ - adatbázis táblák létrehozása
+ - kliensoldali osztályok megírása
+ - szerveroldali osztályok megírása
+ - tervezett tanítási napok számának kezelése
+   NOTE: - megfontolni, hogy felhasználónként, vagy csoportonként eltérhetnek-e?
+
+ComboBoxField:
+ - a lehetõ legtöbb esetben csak a számításba jöhetõ értékeket tartalmazza, amit az 'Összes' szót kiválasztva
+   lehet módosítani
+   NOTE: - az Összes szó is a legördülõ lista elsõ, vagy utolsó eleme
+
+Orak:
+ - megfontolni, hogy szükséges-e tárolni az órák sorszámát, vagy elég csak az aznapi összesített óraszámot rögzíteni?
+   TIPP: - szükségesnek tûnik
+
+Felhasználók:
+ - egyéni órakedvezmény kezelése
+ - kötelezõ heti óraszám kezelése
+ - kezelni, hogy egy adott nap nincs órája az adott tanárnak, vagy csak nincsenek órái, de ott van
+
+Tanórán kívüli tevékenységek:
+ - adatbázis táblák létrehozása
+ - osztályok létrehozása
+ - tipus: elmélet vagy gyakorlat
+   TIPP: - a tkt-eket a tantárgyakkal együtt lehetne kezelni, mivel (majdnem?) ugyanazok a tulajdonságaik
+
+Egyéni foglalkozások:
+ - adatbázis táblák létrehozása
+ - osztályok létrehozása
+
+Osztalyok:
+ - osztályok csoportba foglalása (szakiskola, szakközépiskola, intenzív, esti stb.) (csak TIPP!)
+ NOTE: - ez azért hasznos, mert bizonyos mûveleteket tudunk szûkíteni csak bizonyos osztályokra
+
+A számlálók értékének (rekordok elsõdleges kulcsai) az optimalizálása nagy értékek esetén:
+ - ha már nagyon nagy értékeket vennének fel a számlálók, akkor kiosztjuk a már törölt azonosítókat,
+   majd a számlálót beállítjuk a legnagyobb azonosító értéke+1-re

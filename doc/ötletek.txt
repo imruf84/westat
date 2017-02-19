@@ -1,0 +1,25 @@
+IDÕKERET:
+ - tanév tábla (ezzel lehetne azonosítani a tanárok, osztályok stb. adatait)
+ - osztály tábla (tanévrõl tanévre követni lehet az osztályfõnököket)
+
+FÉLÉVI STATISZTIKA:
+ - elõször a bukott, illetve a nem osztályozható tanulók neveit, illetve az 
+   érintett tantárgyakat adjuk meg, ebbõl a program automatikusan a bukásokat
+   beírja az adott tantárgyakhoz (elégtelenek számát nem lehet képpel megadni)
+ - az osztályzatok beírása után a program automatikusan ellenõrzi, hogy
+   az adatok megfelelnek-e az osztály létszámnak (nem osztályozható tanulók
+   nem számítanak bele)
+ - bukásnál, osztályozónál a tanuló neve mellett meg kellene adni, hogy
+   melyik csoportba jár (kivonat készítésekor hozzá lehetne rendelni megfelelõen
+   az õt tanító tanár nevét)
+ - órarend tárolásakor tárolni kellene, hogy az adott tanár melyik csoportnak
+   tartja az órát
+ - tantárgyak tábla (bontás, legördülõ menü helyett vlm átláthatóbb mgoldás)
+ - évet halasztott tanulók kezelése
+
+BIZTONSÁG:
+ - csatlakozáskor a szerver elõállít egy asszociatív tömböt az adatbázis mezõ
+   neveirõl. Ezeket elküldi, amit a kliensoldalon használunk fel. Bármilyen
+   adatbázis mûvelet elvégzése során a tömbbõl visszanyerhetjük az eredeti neveket.
+   Elõnye, hogy csak a szerver ismeri a mezõneveket, a kliens nem.
+   Hasonló módon minden utasítást, információt hasonlóképpen lehetne kezelni.

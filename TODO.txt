@@ -1,0 +1,69 @@
+RÁÉRÕS:
+- tantárgyak listája tartalmazza az azonosítót is (órarend alapján könnyebb azonosítani így a tantárgyakat)
+- hiányzások formon csak az oktatott tantárgyak kilistázása
+- oszlopok tartalmának igazítása (balra,középre,jobbra)
+
+
+
+BEFEJEZETT:
+- órarend legördülõ listáján az órarend azonosítója helyett az érvényesség dátuma jelenjen meg
+- kötelezõ órák formon az órákat (órarendi órák száma + egyéni foglalkozás formában írja ki)
+- kötelezõ órák formon összegezze a megadott és a mejelenített órák számát
+- hiányzások formon megadni, hogy egy nap hanyadik órától hanyadik óráig hiányzott
+
+- form dialógusnál Mésem helyett Mégsem
+- dátum beviteli mezõjében naptár gomb
+- munkaközösségek kezelése
+- függvény, ami elõállít egy idõszak dátumait tartalmazó tömböt
+  (dátum,nap száma,hét változatának száma,tipus,helyettesített dátum/ha van/,órarend azonosítója,kötelezõ órák száma,órarendi órák száma/bontva 
+  kötelezõ+tkt-re/)
+  TODO: - a nap típusa hatással van az óraszámokra
+- tanórán kívüli tevékenységek díjazott vagy kötelezõ, egyéni vagy csoportos (ezzel elveszítjük az automatizálás lehetõségét,
+  mivel a tantárgyak típusai alapján dönti el a rendszer azt, hogy mit hová írjon a gyakorlatot és az elméletet kivéve)
+- helyettesítéseknél helyettesített tanár megadása (eddig elvileg a hiányzások adataiból határozta meg a rendszer)
+  TIPP: - a hiányzások tábla megváltoztatása során erre a továbbiakban nincs lehetõség, ezért betöltéskor kell meghatározni
+          az excel állomány segítségével
+- rendezés egyenlõre SQL szinten (minden osztálynak megadni, hogy mely mezõk szerint rendezze az adatokat)
+- olyan naptípus, ahol kötelezõ órák szerint haladtunk, de a kötelezõ órákat nem az osztályok között osztja szét, hanem fiktív osztályhoz írja
+- modulok betöltésekor csak kiírni, hogy "Betöltés...", mert a modulok felsorolása zavaró lehet
+- nyomonkövetni, hogy ki melyik menüpontot nézte meg (lezárás menüpont, csak akkor zárhassa le, ha minden menüpontot megnézett, 
+  visszafordítani csak operátor tudja) (Lezaras eszköz)
+  TIPP: - esetleg pirossal jelölni azon menüpontok szövegét, amelyeket kötelezõ megnézni
+- hiányzásoknál órától óráig mezõben egyész nap kipipálhatósága, vagy a hiányzás tábla csak ezeket tartalmazza: 
+  [dátum],napi óra,mennyi kötelezõ ebbõl, [ebbõl mennyit írok jóvá],[hiányzás típusa],[igazolt-e]
+  kötelezõ az alapértelmezett, nem igazoltnál nulla
+  VAGY hiányzás idõszakának a típusának a meghatározása (a formon kívül elvileg minden menne)
+  PROBLÉMA: - nem lehet, mert ezek alapján készül az osztályonkénti bontás
+  VAGY: hiányzás idõtartamát illetõen lehessen megadni több típust: 
+  1. adott nap, adott óra
+  2. adott nap órától óráig
+  3. adott nap egész nap
+  4. adott naptól adott napig
+- LIMIT adatok megadása szûrõként (megjelenítendõ adatok számának megváltoztatása)
+  VAGY a jobb oldali panel alján lehessen változtatni a megjelenítendõ adatok mennyiségén (ez tûnik jobbnak, mert az összes adat
+  letöltése után csak a kliens oldalon kell belenyúlni, és a beállítások állandóak maradnak)
+- helyettesítésekbõl globális excel állomány generálása (Helyettnaplo eszköz)
+  TIPP: - Helyettesítési napló menüpontban szûrõk (tanév,idõszak,munkaközösség) segítségével szöveges állomány 
+          létrehozása, ami tartalmazza dátum és óraszám szerint rendezve a helyettesítések adatait, vagy
+          adatok képernyõre írása
+        - a munkaközösség szûrõ a munkaközösségek táblából szedi az adatokat
+- meg lehessen adni, hogy melyik felhasználónak melyik tantárgyát miként számolják el (elm,gyak,ef,tkt...)
+- lehetõséget biztosítani, hogy excel segítségével (akár parancssorból) az xml állományokat átkonvertáljuk bináris xls-be (vagy xlsx-be)
+  NOTE: - xlsx jobb lenne
+        - lehetne használni rá a converter.xls eszközt
+- jelentések generálása csak adott napig
+  TIPP: - a szûrõk közé fel lehetne venni egy DateField-et, ami ha nem üres akkor addig a dátumig történne generálás
+- date field esetében nincs függõlegesen középre igazítva a beviteli mezõ
+- helyettesítési naplóban állapot szûrõ megjelenítése
+- converter makrót bõvíteni, hogy levédje a megfelelõ cellákat
+
+
+
+FONTOS:
+- alsó sávban összes/látható adatok számának a megjelenítése
+- órarend óráinak kezelése
+- kliens oldali adat szûrés/rendezés
+- billentyûzet kezelése
+- jobb egérgomb kezelése (PopupMenu osztály)
+- lehetõséget biztosítani, hogy csak bizonyos felhasználói csoportok léphessenek be
+- jelszó ellenõrzése a másik szerver adatai alapján

@@ -1,0 +1,10 @@
+SELECT datum,helyettesito.felhasznaloNev AS helyettesitoNev,osztalyNev,ora,tantargyNev,helyettesitett.felhasznaloNev AS helyettesitettNev,helyettesitestipusaNev 
+FROM helyettesitesek
+LEFT JOIN osztaly_cimkek ON osztalyok.osztalyID=helyettesitesek.osztalyID
+LEFT JOIN tantargyak ON tantargyak.tantargyID=helyettesitesek.tantargyID
+LEFT JOIN felhasznalok helyettesitett ON helyettesitett.felhasznaloID=helyettesitesek.helyettesitettID
+LEFT JOIN felhasznalok helyettesito ON helyettesito.felhasznaloID=helyettesitesek.helyettesitoID
+LEFT JOIN helyettesitestipusai ON helyettesitestipusai.helyettesitestipusaID=helyettesitesek.helyettesitestipusaID
+WHERE idoszakID=1
+ORDER BY datum,ora
+LIMIT 0,1000000000

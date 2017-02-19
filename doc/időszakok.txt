@@ -1,0 +1,10 @@
+Idõszakok:
+ - munkaszüneti nap
+ - tanítás nélküli munkanap
+ - olyan nap, amelyen adott számú óra van csak megtartva
+ - gyakorlatosoknak van nyári gyakorlat
+ - olyan nap, amelyen egy másik napot pótlunk (pl szombaton is suli)
+ - idõszakok hozzárendelése csoportokhoz (pl. nyári gyakorlat beiktatása)
+
+Órarendek:
+ - olyan órarend, amely csak egy napig, vagy bizonyos ideig érvényes (utána az elõzõ lesz érvényes)

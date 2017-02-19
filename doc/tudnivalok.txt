@@ -1,0 +1,4 @@
+- modul betöltésekor meg kell jelölni a modult, hogy készen áll
+  (ModuleManager.ready(moduleName:string) paranccsal).
+  Új (nem általam készített) modulokban is szerepelnie kell ennek az
+  utasításnak!
